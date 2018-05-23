@@ -1,9 +1,9 @@
 
 public class Best_Time_to_Buy_and_Sell_Stock_121 {
-
-    public int maxProfit(int[] prices) {
-        //Time: O(n)
-        //Space: O(1)
+    
+    //Time: O(n)
+    //Space: O(1)
+    public int maxProfit(int[] prices) {   
         int max = 0;
         int min = Integer.MAX_VALUE;
         for (int i = 0; i < prices.length; i++) {
@@ -18,9 +18,9 @@ public class Best_Time_to_Buy_and_Sell_Stock_121 {
     }
 
     //Kadane's Algorithm
+    //Time: O(n)
+    //Space: O(1)
     public int maxProfit2(int[] prices) {
-        //Time: O(n)
-        //Space: O(1)
         int maxCur = 0, maxSoFar = 0;
         for (int i = 1; i < prices.length; i++) {
             maxCur = Math.max(0, maxCur += prices[i] - prices[i - 1]);
@@ -30,7 +30,6 @@ public class Best_Time_to_Buy_and_Sell_Stock_121 {
     }
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         System.out.println(new Best_Time_to_Buy_and_Sell_Stock_121()
                 .maxProfit(new int[] { 1, -1, 2 }));
         System.out.println(new Best_Time_to_Buy_and_Sell_Stock_121()
